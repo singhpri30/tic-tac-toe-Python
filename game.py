@@ -19,4 +19,16 @@ def display_board(boardList):
 board=["#","X","O","X","O","X","O","X","O","X"]
 display_board(board)
 
+# ask user for correct input
+def user_input():
+    marker=""
+    while marker!="X" and marker!="O":
+        marker= input("Player1: choose X or O: ").upper()
+        if marker=="X":
+            return("X","O")
+        else:
+            return("O","X")
+
+#tuple unpacking
+player1_marker,player2_marker=user_input()
 
